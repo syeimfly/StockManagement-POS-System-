@@ -63,6 +63,26 @@ internal_stock_management/
 
 Stock quantity only ever changes through a sale or a restock — there's no way to directly edit it, so there's always a paper trail.
 
+## Flow diagram
+
+```mermaid
+flowchart TD
+    A[POS screen] -->|scan/upload barcode or tap product| B[Cart]
+    B -->|Confirm payment| C[POST /sales]
+    C --> D[Stock quantity decreases]
+    C --> E[StockMovement: OUT / SALE]
+    C --> F[PDF receipt downloaded]
+
+    G[Products screen] -->|Restock button + quantity| H[POST /products/id/restock]
+    H --> I[Stock quantity increases]
+    H --> J[StockMovement: IN / RESTOCK]
+
+    E --> K[History screen]
+    J --> K
+    D --> L[Dashboard low-stock alerts]
+    I --> L
+```
+
 ## Running it
 
 ### Option 1 — Docker (recommended, one command)
