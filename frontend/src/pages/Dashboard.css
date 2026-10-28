@@ -1,0 +1,95 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 16px 16px;
+}
+
+.dashboard-page h1 {
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.dashboard-page h2 {
+  font-size: 16px;
+  margin: 8px 0 0;
+}
+
+.error-text {
+  color: var(--out);
+  font-size: 13px;
+  margin: 0;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.stat-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.alert-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alert-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.alert-row.low {
+  background: color-mix(in srgb, var(--low) 15%, #fff);
+}
+
+.alert-row.out {
+  background: color-mix(in srgb, var(--out) 15%, #fff);
+}
+
+.alert-name {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.alert-sub {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.restock-btn {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text);
+  padding: 16px 0;
+}

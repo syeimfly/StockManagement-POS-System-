@@ -1,0 +1,191 @@
+.products-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products-header h1 {
+  margin: 16px 0;
+  padding: 0;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.error-text {
+  color: var(--out);
+  font-size: 13px;
+  margin: 0;
+}
+
+.search-bar,
+.modal input {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.category-pills {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.pill {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.pill.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.product-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-name {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.product-sub {
+  font-size: 12px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stock-badge {
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.stock-badge.good { background: var(--good); }
+.stock-badge.low { background: var(--low); }
+.stock-badge.out { background: var(--out); }
+
+.row-menu {
+  position: relative;
+}
+
+.menu-btn {
+  border: none;
+  background: none;
+  font-size: 18px;
+  padding: 4px 8px;
+}
+
+.menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.menu-dropdown button {
+  border: none;
+  background: none;
+  padding: 8px 14px;
+  text-align: left;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.menu-dropdown button:hover {
+  background: var(--border);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text);
+  padding: 24px 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal h2 {
+  margin: 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.modal-actions button:not(.btn-accent) {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+}

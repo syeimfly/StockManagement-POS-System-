@@ -1,0 +1,106 @@
+.history-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 16px 16px;
+}
+
+.history-page h1 {
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.error-text {
+  color: var(--out);
+  font-size: 13px;
+  margin: 0;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-tab {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.filter-tab.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.group-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 10px 0 4px;
+}
+
+.entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.entry-icon.sale {
+  background: var(--out);
+}
+
+.entry-icon.restock {
+  background: var(--good);
+}
+
+.entry-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.entry-name {
+  font-weight: 500;
+  color: var(--text-h);
+  font-size: 14px;
+}
+
+.entry-sub {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.entry-qty {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text);
+  padding: 16px 0;
+}
